@@ -1,0 +1,66 @@
+<!-- <div lang="en">
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body ng-app="myApp"> -->
+  
+  <div class = "her">
+    <div style="width: 70%;border-right: 1px solid black;  background-image:url('../../assets/images/tech.jpeg'); animation-name: pic;
+    animation-duration: 20s;animation-iteration-count: infinite;transition-delay: 2s;"></div>
+    <div>
+    <div class="form-box">
+      <div class="button-box" ng-controller="myCtrl">
+        <div id ="btn"></div>
+        <button type="button" class="toggle-btn" (click)="login($event)" >Login</button>
+        <button type="button" class="toggle-btn" (click)="register($event)">Register</button>
+      </div>
+      <div class = "social-icons">
+        <img src ="">
+        <img src ="">
+        <img src ="">
+  
+      </div>
+      <form id = "login" name="login" class = "input-group">
+          <input type="text" class="input-field" placeholder= "UserName" [(ngModel)]="loginUser.username" name="name" required>
+   
+          <input type="password" class="input-field" placeholder= "Password" [(ngModel)]="loginUser.password" name = "password" required>
+         
+          <h5 style="color:red;" id = "logerr">{{errorMessage}}</h5>
+          <input type="checkbox" class="check-box" ><span>Remember Password</span>
+          
+          <button type="submit" class="submit-btn" (click)=authUser()  
+          [ngClass] = "{'submit-btn-grey':!(this.loginUser.username!='' && this.loginUser.password!='') ,
+          'submit-btn':(this.loginUser.username!='' && this.loginUser.password!='')}"  
+          [disabled] = "(this.loginUser.username=='' && this.loginUser.password=='')">Login</button>
+          
+      </form>
+      <form id="register" class = "input-group">
+        <input type="text" class="input-field" placeholder= "UserName" [(ngModel)]="regUser.username" name="name" required>
+        <input type="email" class="input-field" placeholder= "Email Id" [(ngModel)]="regUser.email" name = "email" required>
+        <input type="password" class="input-field" placeholder= "Password" [(ngModel)]="regUser.password" name = "password" required>
+        <h5 style="color:red;" id = "regerr">{{errorMessage}}</h5>
+        <input type="checkbox" class="check-box" (change)="changed($event)" id="check-box"><span>I agree</span>
+        <!-- <button type="submit" [ngClass]="{'submit-btn':!togglebool , 'submit-btn-grey':togglebool}"  (click) = registerUser() [disabled]="togglebool" id = "reg" >Register</button> -->
+        <button type="submit" class = "submit-btn"  (click) = registerUser() [disabled]="togglebool" id = "reg" >Register</button>
+    </form>
+    </div>
+  </div>
+   
+
+
+  </div>
+ 
+  
+  
+<!-- </body> -->
+
+
+
+
+    
+ 

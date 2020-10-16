@@ -1,0 +1,36 @@
+<!-- 
+<mat-dialog-content >
+
+<div class="main">
+    <div class="lay">  <p>You want cookie 1?</p>
+        <input type="checkbox" class="check-box" name="check1">
+
+</div>
+<div class="lay">  <p>You want cookie 2?</p>
+    <input type="checkbox" class="check-box" name="check2">
+
+</div>
+</div>
+<mat-dialog-actions><button (click)="setCookies()">Okay</button></mat-dialog-actions>
+
+</mat-dialog-content> -->
+
+<h2 mat-dialog-title>We need your consent for cookies</h2>
+
+    <form [formGroup]="form" (submit)="setCookies(form.value)">
+      
+        <div formArrayName="cookie" *ngFor="let c of cookieArray.controls; let i=index">
+         <input type="checkbox" [formControlName]="i" /> {{cookies[i].name}}
+        </div>
+        <mat-dialog-actions>
+        <button mat-button [mat-dialog-close]="true" type=”submit” class="submit-btn">Submit</button>
+      </mat-dialog-actions>
+       </form>
+
+       <!-- <form [formGroup]="form" (ngSubmit)="setCookies()">
+        <label formArrayName="orders" *ngFor="let order of ordersFormArray.controls; let i = index">
+          <input type="checkbox" [formControlName]="i">
+          {{cookies[i].name}}
+        </label>
+        <button>submit</button>
+      </form> -->

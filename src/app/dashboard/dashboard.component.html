@@ -1,0 +1,58 @@
+<html class = "html-class">
+
+  <div class="hero" *ngIf="this.intercept.isLoggedIn()">
+
+  
+<div  class = "division" layout="row" layout-align="center stretch" layout-wrap>
+
+
+<!-- <div class= "header-card">My Articles</div> -->
+<div style="width:18%;"></div>
+
+
+  <div class = "mini-card-grid">
+    <div class="cards" style="height:400px;">
+      <div class = "card-head">
+        <div class = " card-date"></div>
+        <div class =" card-title"> </div>
+        <br>
+      
+      </div>
+      <div class = "card-description-empty"> ADD
+
+      </div>
+    </div>
+    
+    <div  class ="cards" *ngFor="let u of posts"  layout="row" layout-align="center stretch" layout-wrap>
+      <div style="height:400px;" (click)= "getSinglePost(u)">
+      
+        <div class = "card-head">
+          <div class ="card-date" >Dated {{u.createdOn}}</div>
+          <div class = "card-title">{{u.title}}</div>
+        </div>
+        <hr>
+        <div class = "card-description">{{u.desc}} 
+        </div>
+        
+        <!-- <div id="test">
+          <button type="submit" name = "delete" class = "delete-btn" ></button>
+        </div> -->
+        <!-- <div>
+
+          <span class = "delete-btn"></span>
+        </div> -->
+      </div>
+      
+     </div>
+     
+     
+  </div>
+  
+   
+
+</div>
+
+
+</div>
+
+</html> 

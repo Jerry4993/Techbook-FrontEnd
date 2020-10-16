@@ -1,0 +1,1 @@
+export * from './cookie-view-component.component';

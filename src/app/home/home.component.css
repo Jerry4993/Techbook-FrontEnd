@@ -1,0 +1,17 @@
+body  {
+    background-image: url('../../assets/images/photo-1533139143976-30918502365b.jpg');
+     background-color: black;  
+  }   
+
+.main{
+
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+@media screen and (max-width:500px)
+{
+.main a{
+width:100%;
+}
+}

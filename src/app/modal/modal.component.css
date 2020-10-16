@@ -1,0 +1,20 @@
+.title{
+    font-weight: bolder;
+    font-family: cursive;
+}
+.cont{
+    font-family: cursive; 
+}
+
+.btn{
+
+    /* width:85%; */
+    /* padding:10px 30px; */
+    cursor: pointer;
+    display:block;
+    margin:auto;
+    background: linear-gradient(#9b9591,#f3cc7f);
+    border:0;
+    outline:none;
+    border-radius: 5px;;
+  }

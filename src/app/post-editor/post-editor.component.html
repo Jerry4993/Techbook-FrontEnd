@@ -1,0 +1,39 @@
+
+
+<div  class="divmain" >
+
+
+ <div style="width:10%;"></div>
+ <!-- <div style="width:2%;height: 100%;"></div> -->
+               <div class = "main" >
+                 <div class ="card-head">
+                
+               <div >
+                
+                <div class="createdOn" > On  {{ post.createdOn }}</div>
+                <div class= "title"><input type="text" class = "input-title" [(ngModel)]= "post.title"></div>
+                <div style="height:20px;border-bottom: 1px solid ;"></div>
+                
+              </div> 
+              
+              <div style="width:510px"></div>
+               
+                  <!-- <div class ="input-btn" ><button value = "Update" type = "submit" name="Update" class= "update-btn">Update</button></div>
+                  <div style="width:50px"></div>
+                  <div class ="input-btn"  ><button value = "Update" type = "submit" name="Update" class= "update-btn">Delete</button></div>
+       -->
+                </div>
+          
+                 <div class="desc"><textarea class = "input-desc" [(ngModel)]= "post.desc"></textarea></div>  
+             </div>  
+             
+   
+            
+            <div style="width:2%;border-right:2 px solid #000"></div>
+            <div class ="input-btn" >
+              <div style="width: 40px;"></div>
+                <div class = "divsubmit"><button value = "Update" type = "submit" name="Update" class= "update-btn" (click)="UpdatePost(post)">Update</button></div>
+                <div class = "divsubmit"><button value = "Update" type = "submit" name="Update" class= "delete-btn" (click)="DeletePost(post.id)">Delete</button></div>
+  </div> 
+</div>
+
